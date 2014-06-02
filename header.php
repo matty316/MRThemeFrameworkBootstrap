@@ -18,7 +18,7 @@
 
   <body <?php body_class(); ?>>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,7 +34,7 @@
 
             $args = array(
               'menu' => 'header-menu',
-              'menu_class' => 'nav navbar-nav',
+              'menu_class' => 'nav navbar-nav pull-right',
               'container' => 'false'
             );
 

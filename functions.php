@@ -20,8 +20,41 @@ function theme_js()
   $wp_scripts->add_data( 'respond_js', 'conditional', 'lt IE 9' );
 
   wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(jquery), '', true );
-  wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(jquery), '', true );
+  wp_enqueue_script( 'main-js', get_template_directory_uri() . '/dist/js/main.min.js', array(jquery), '', true );
 
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_js' );
+
+// Add dynamic navbar
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+$args = array(
+	'default-image' => get_template_directory_uri() . '/img/logo5.png',
+);
+
+add_theme_support( 'custom-header', $args );
+add_theme_support( 'post-thumbnails' );
+
+$args = array(
+  'default-color' => 'f1f4f9'
+
+);
+add_theme_support( 'custom-background', $args );
+
+function create_widget($name, $id, $description)
+{
+  register_sidebar(array(
+    'name' => __( $name ),
+    'id' => $id,
+    'description' => __( $description ),
+    'before_widget' => '<div class="widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>'
+  ));
+
+}
