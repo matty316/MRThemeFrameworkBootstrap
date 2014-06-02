@@ -1,22 +1,60 @@
-// variables
+// Variables
 $nav-color: #369;
 $link-color: #fff;
+$link-hover-color: #383d51;
+$text-color: #fff;
+
+// Mixins
 
 /* Header Styles
 =====================*/
-.navbar-fixed-top {
+html, body {
+  height: 100%; // Hack to get jumbotron to have 100% height
+}
+nav {
+  height: 70px;
   line-height: 70px;
-  a {
-    color: $link-color;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  li {
+    &.current-menu-item a {
+      border: 2px solid $link-color;
+    }
+    a {
+      color: $link-color;
+      padding: 10px;
+      &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
+        background: $link-color;
+      }
+    }
   }
   .admin-bar & {
     margin-top: 32px;
   }
 }
 
-
 .jumbotron.front {
-  height: 800px;
+  height: 100%;
   background: url(http://37.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg) fixed;
   background-size: cover;
+  text-align: center;
+  color: $text-color;
+  .container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  &:hover {
+    @include scale(1.1);
+  }
 }

@@ -11,5 +11,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This theme, like WordPress, is licensed under the GPL.
 */
 
+// Compass
+@import "compass/css3";
+
+/* Global Styles
+====================*/
+* {
+  @include box-sizing(border-box);
+  @include transition(all 0.3s ease-in-out);
+}
+
 //Partials
 @import "header";
