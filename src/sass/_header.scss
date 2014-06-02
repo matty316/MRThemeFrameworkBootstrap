@@ -11,6 +11,7 @@ $text-color: #fff;
 html, body {
   height: 100%; // Hack to get jumbotron to have 100% height
 }
+
 nav {
   height: 70px;
   line-height: 70px;
@@ -19,6 +20,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  font-size: 18px;
   li {
     &.current-menu-item a {
       border: 2px solid $link-color;
@@ -26,6 +28,7 @@ nav {
     a {
       color: $link-color;
       padding: 10px;
+      font-weight: 300;
       &:hover {
         color: $link-hover-color;
         text-decoration: none;
@@ -40,14 +43,20 @@ nav {
 
 .jumbotron.front {
   height: 100%;
-  background: url(http://37.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg) fixed;
+  background: url(http://24.media.tumblr.com/031f46c3e427bca1eca2361b1651cffa/tumblr_n6eszmeQMR1st5lhmo1_1280.jpg) fixed;
   background-size: cover;
   text-align: center;
   color: $text-color;
+  width: 100%;
+  // Hack to position absolutely center
+  display: table;
   .container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
+    vertical-align: middle;
+    display: table-cell;
+  }
+  h1 {
+    font-style: italic;
+    font-weight: 900;
   }
 }
 
@@ -57,4 +66,10 @@ nav {
   &:hover {
     @include scale(1.1);
   }
+}
+
+section.img {
+  height: 500px;
+  background: url(http://37.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg) fixed;
+  background-size: cover;
 }

@@ -12,7 +12,7 @@ This theme, like WordPress, is licensed under the GPL.
 */
 /* Global Styles
 ====================*/
-/* line 19, ../../src/sass/style.scss */
+/* line 22, ../../src/sass/style.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -23,6 +23,19 @@ This theme, like WordPress, is licensed under the GPL.
   transition: all 0.3s ease-in-out;
 }
 
+/* line 28, ../../src/sass/style.scss */
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* line 34, ../../src/sass/style.scss */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
 /* Header Styles
 =====================*/
 /* line 11, ../../src/sass/_header.scss */
@@ -30,7 +43,7 @@ html, body {
   height: 100%;
 }
 
-/* line 14, ../../src/sass/_header.scss */
+/* line 15, ../../src/sass/_header.scss */
 nav {
   height: 70px;
   line-height: 70px;
@@ -39,52 +52,75 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  font-size: 18px;
 }
-/* line 23, ../../src/sass/_header.scss */
+/* line 25, ../../src/sass/_header.scss */
 nav li.current-menu-item a {
   border: 2px solid white;
 }
-/* line 26, ../../src/sass/_header.scss */
+/* line 28, ../../src/sass/_header.scss */
 nav li a {
   color: white;
   padding: 10px;
+  font-weight: 300;
 }
-/* line 29, ../../src/sass/_header.scss */
+/* line 32, ../../src/sass/_header.scss */
 nav li a:hover {
   color: #383d51;
   text-decoration: none;
   background: white;
 }
-/* line 36, ../../src/sass/_header.scss */
+/* line 39, ../../src/sass/_header.scss */
 .admin-bar nav {
   margin-top: 32px;
 }
 
-/* line 41, ../../src/sass/_header.scss */
+/* line 44, ../../src/sass/_header.scss */
 .jumbotron.front {
   height: 100%;
-  background: url(http://37.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg) fixed;
+  background: url(http://24.media.tumblr.com/031f46c3e427bca1eca2361b1651cffa/tumblr_n6eszmeQMR1st5lhmo1_1280.jpg) fixed;
   background-size: cover;
   text-align: center;
   color: white;
-}
-/* line 47, ../../src/sass/_header.scss */
-.jumbotron.front .container {
-  position: absolute;
-  top: 50%;
   width: 100%;
+  display: table;
+}
+/* line 53, ../../src/sass/_header.scss */
+.jumbotron.front .container {
+  vertical-align: middle;
+  display: table-cell;
+}
+/* line 57, ../../src/sass/_header.scss */
+.jumbotron.front h1 {
+  font-style: italic;
+  font-weight: 900;
 }
 
-/* line 54, ../../src/sass/_header.scss */
+/* line 63, ../../src/sass/_header.scss */
 .logo {
   height: 50px;
   width: auto;
 }
-/* line 57, ../../src/sass/_header.scss */
+/* line 66, ../../src/sass/_header.scss */
 .logo:hover {
   -webkit-transform: scale(1.1, 1.1);
   -moz-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   -o-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
+}
+
+/* line 71, ../../src/sass/_header.scss */
+section.img {
+  height: 500px;
+  background: url(http://37.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg) fixed;
+  background-size: cover;
+}
+
+/* Single Post Styles
+======================*/
+/* line 3, ../../src/sass/_single.scss */
+.attachment-post-thumbnail {
+  width: 100%;
+  height: auto;
 }
