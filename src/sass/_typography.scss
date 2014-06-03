@@ -1,0 +1,23 @@
+// Variables
+$text-color: #444;
+
+// Vertical Rhythm
+$base-font-size: 18px;
+$base-line-height: 27px;
+@include establish-baseline($base-font-size);
+
+body {
+  font-family: $lato;
+  text-rendering: optimizeLegibility;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $text-color;
+}
+
+p {
+  font-family: $noto;
+}
+
+a {
+  color: $accent-color;
+}

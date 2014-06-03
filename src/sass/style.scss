@@ -13,9 +13,13 @@ This theme, like WordPress, is licensed under the GPL.
 
 // Compass
 @import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
 
 // Variables
 $lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$noto: 'Noto Serif', serif;
+$accent-color: #97d9d7;
 
 /* Global Styles
 ====================*/
@@ -24,18 +28,9 @@ $lato: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   @include transition(all 0.3s ease-in-out);
 }
 
-// Hack to stop body from extending outside of screen
-body, html {
-  width: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
-
-body {
-  font-family: $lato;
-  text-rendering: optimizeLegibility;
-}
-
 //Partials
+@import "typography";
 @import "header";
 @import "single";
+@import "pages";
+@import "widgets";

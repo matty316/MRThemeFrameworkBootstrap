@@ -1,3 +1,11 @@
-var hello = 'look im grunting!';
+jQuery(function($) {
+  $(window).scroll(function() {
 
-var awesome = 'yes it is awesome!';
+  	var yPos = ( $(window).scrollTop()  );
+  	if (yPos > 200) {
+  		$('nav.front-page').addClass('background');
+  	} else {
+  		$('nav.front-page').removeClass('background');
+  	}
+  });
+});

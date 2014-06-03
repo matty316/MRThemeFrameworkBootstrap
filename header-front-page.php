@@ -19,7 +19,7 @@
   <body <?php body_class(); ?>>
 
     <header>
-      <nav class="background">
+      <nav class="front-page">
         <div class="container">
 
           <a href="<?php bloginfo( 'url' ); ?>"><img class="logo" src="<?php header_image(); ?>" alt="Matt Reed Logo" /></a>
@@ -39,5 +39,4 @@
           ?>
         </div>
       </nav>
-
     </header>

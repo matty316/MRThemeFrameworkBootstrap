@@ -3,6 +3,7 @@
 function theme_styles()
 {
   wp_enqueue_style('lato', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' );
+  wp_enqueue_style('noto', 'http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' );
   wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
   wp_enqueue_style( 'main-css', get_template_directory_uri() . '/style.css' );
 }
@@ -59,3 +60,5 @@ function create_widget($name, $id, $description)
   ));
 
 }
+
+create_widget( 'Sidebar', 'sidebar', 'Side bar widget' );

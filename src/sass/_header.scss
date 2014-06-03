@@ -3,6 +3,7 @@ $nav-color: #369;
 $link-color: #fff;
 $link-hover-color: #383d51;
 $text-color: #fff;
+$background-color: rgba(#383d51, 0.9);
 
 // Mixins
 
@@ -12,16 +13,21 @@ html, body {
   height: 100%; // Hack to get jumbotron to have 100% height
 }
 
+.background {
+  background: $background-color;
+}
+
 nav {
   height: 70px;
-  line-height: 70px;
   margin-top: 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   font-size: 18px;
+  z-index: 999;
   li {
+    line-height: 70px;
     &.current-menu-item a {
       border: 2px solid $link-color;
     }
@@ -63,6 +69,7 @@ nav {
 .logo {
   height: 50px;
   width: auto;
+  margin-top: 10px;
   &:hover {
     @include scale(1.1);
   }
